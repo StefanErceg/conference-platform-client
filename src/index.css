@@ -1,0 +1,314 @@
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans',
+        'Droid Sans', 'Helvetica Neue', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: azure;
+    color: rgb(60, 60, 60);
+}
+
+code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+button {
+    background-color: white;
+    outline: none;
+    border: thin solid rgb(120, 120, 120);
+    border-radius: 3px;
+    height: 40px;
+}
+
+button:hover {
+    cursor: pointer;
+    background-color: azure;
+}
+
+.page_wrap {
+    height: 100vh;
+    width: 100vw;
+}
+
+.page_wrap .title {
+    width: 100%;
+    text-align: center;
+    height: 40px;
+    font-size: 26px;
+    padding-top: 30px;
+}
+
+.conferences_wrap {
+    margin: 0;
+    padding: 0 10px;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.conference_item {
+    margin: 20px;
+    padding: 20px;
+    border: thin solid rgb(220, 220, 200);
+    border-radius: 10px;
+    width: 450px;
+    height: 320px;
+    background-color: white;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    display: flex;
+    flex-direction: column;
+}
+
+.conference_item .conference_name {
+    width: 100%;
+    text-align: center;
+    font-size: 26px;
+}
+
+.conference_item .duration {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.conference_item .conference_date {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.conference_item .conference_date .date {
+    margin-left: 20px;
+}
+
+.conference_item .conference_time {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.conference_item .conference_time .time {
+    margin-left: 20px;
+    display: flex;
+    align-items: flex-start;
+}
+
+.conference_item .conference_time .time .hours {
+    font-size: 10px;
+    margin-left: 5px;
+}
+
+.conference_item .description {
+    margin-top: 10px;
+    width: 100%;
+}
+.conference_item:hover {
+    background-color: rgb(240, 240, 240);
+    transform: scale(1.05);
+}
+
+.conference_item .actions {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    height: 100%;
+}
+
+.conference_item .actions .preview {
+    width: 120px;
+}
+
+.events_wrap {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 10px;
+    margin: 20px 10px;
+}
+
+.event_item {
+    width: 90%;
+    display: flex;
+    justify-content: flex-start;
+    padding-bottom: 5px;
+    border-bottom: thin solid rgb(220, 220, 220);
+}
+
+.event_item .name {
+    width: 20%;
+    margin-right: 30px;
+}
+
+.event_item .date {
+    width: 10%;
+    margin-right: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.event_item .date .value {
+    margin-left: 10px;
+}
+.event_item .time {
+    width: 10%;
+    margin-right: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.event_item .time .value {
+    margin-left: 10px;
+    display: flex;
+    align-items: flex-start;
+}
+
+.event_item .time .value .hours {
+    font-size: 12px;
+    margin-left: 5px;
+}
+
+.event_item .location {
+    width: 45%;
+    margin-right: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.event_item .location .value {
+    margin-left: 10px;
+}
+
+.event_item .type {
+    color: red;
+}
+
+.modal_wrapper {
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    background-color: rgb(220, 220, 220, 0.5);
+}
+
+.modal {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    border-radius: 10px;
+    z-index: 101;
+    background-color: #f3f3f3;
+}
+
+.modal.sm {
+    width: 360px;
+}
+
+.modal.md {
+    width: 480px;
+}
+
+.modal.lg {
+    width: 620px;
+}
+
+.modal.xl {
+    width: 70%;
+}
+
+.modal .modal_header {
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: thin solid rgb(220, 220, 220);
+}
+
+.modal .modal_header .title {
+    font-size: 22px;
+    padding: 10px;
+}
+
+.modal .modal_header .close {
+    margin-right: 20px;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.modal .modal_header .close:hover {
+    background-color: rgb(220, 220, 220, 0.5);
+    border-radius: 50%;
+}
+
+.modal .modal_body {
+    min-height: 200px;
+}
+
+.modal .modal_footer {
+    height: 80px;
+    border-top: thin solid rgb(220, 220, 220);
+}
+
+.material-icons {
+    color: rgba(60, 60, 60, 0.9);
+}
+
+.material-icons.md-18 {
+    font-size: 18px;
+}
+
+.material-icons.md-22 {
+    font-size: 22px;
+}
+
+.material-icons.md-24 {
+    font-size: 24px;
+}
+.material-icons.md-28 {
+    font-size: 28px;
+}
+.material-icons.md-36 {
+    font-size: 36px;
+}
+.material-icons.md-48 {
+    font-size: 48px;
+}
+
+.material-icons.pointer_cursor {
+    cursor: pointer;
+}
+
+.material-icons.default_cursor {
+    cursor: default;
+}
+
+.material-icons.red {
+    color: rgb(167, 42, 42);
+}
+
+.material-icons.green {
+    color: rgb(97, 156, 97);
+}
+
+.material-icons.blue {
+    color: rgb(0, 0, 128);
+}
+
+.material-icons.yellow {
+    color: rgb(164, 182, 0);
+}
+
+.material-icons.hover_red:hover {
+    color: rgb(167, 42, 42);
+}
+
+.material-icons.hover_green:hover {
+    color: rgb(97, 156, 97);
+}
+
+.material-icons.hover_blue:hover {
+    color: rgb(30, 30, 185);
+}
